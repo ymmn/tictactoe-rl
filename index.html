@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TicTacToe Reinforcement Learning</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+      body {
+        padding: 24px 36px;
+      }
+
+      .training-container {
+        margin-bottom: 48px;
+      }
+    </style>
+</head>
+<body>
+  <div>
+    <div class="training-container">
+      <h2>Training</h2>
+      <select id="training-options">
+        <option value="random-random">Watch RandomBot vs RandomBot</option>
+        <option value="reflexive-random">Watch ReflexiveBot vs RandomBot</option>
+        <option value="reflexive-reflexive">Watch ReflexiveBot vs ReflexiveBot</option>
+        <option value="q-random">Play against RandomBot</option>
+        <option value="q-reflexive">Play against ReflexiveBot</option>
+        <option value="q-q">Play against Self</option>
+      </select>
+      <button
+        class="btn btn-default"
+        id="train"
+      >
+        Toggle Training
+      </button>
+      <div id="bot-training-status"></div>
+    </div>
+
+    <div>
+      <h2>Evaluation</h2>
+      <button
+        class="btn btn-default"
+        id="evaluate-bot"
+      >
+       Evaluate bot
+      </button>
+      <div id="bot-evaluation"></div>
+    </div>
+  </div>
+  <script src="js/lib/jquery-3.2.1.min.js"></script>
+  <script src="js/q-learn.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/tictactoe.js"></script>
+  <script src="js/tictactoe-rl.js"></script>
+</body>
+</html>
